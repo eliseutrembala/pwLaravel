@@ -16,7 +16,7 @@
 </div>  
 @endif
 
-<form method="post" action="{{ route('animais.gravar') }}">
+<form class="p-10 bg-white rounded shadow-xl" method="post" enctype="multipart/form-data"  action="{{ route('animais.gravar') }}">
     @csrf
     <div class="">
         <label class="block text-sm text-gray-600" for="nome">Nome</label>
@@ -24,7 +24,11 @@
     </div>
     <div class="mt-2">
         <label class="block text-sm text-gray-600" for="idade">Idade</label>
-        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="idade" value="{{ old('idade') }}" name="idade" type="number"  placeholder="Idade" aria-label="idade">
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="idade" value="{{ old('idade') }}" name="idade" type="number"  placeholder="Idade " aria-label="idade">
+    </div>
+    <div class="mt-2">
+        <label class="block text-sm text-gray-600" for="imagem">Imagem</label>
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="imagem" name="imagem" type="file"  placeholder="Imagem" aria-label="imagem">
     </div>
     <div class="mt-6">
         <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit" value="Gravar">Gravar</button>
